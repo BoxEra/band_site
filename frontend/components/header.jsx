@@ -17,12 +17,15 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-
+    this.props.history.replace(`/${this.state.pageViewed}`);
   }
 
   handleClick(e) {
     if (e.target.nodeName === 'LI') {
       this.props.history.replace(`/${e.target.innerHTML}`);
+      this.setState({
+        pageViewed: e.target.innerHTML
+      });
     }
   }
 
