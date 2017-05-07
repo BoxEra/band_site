@@ -19,7 +19,7 @@ app.get('/*', (req, res) => {
 db.connect(URL, (err) => {
   if (err) {
     console.log('Fuck! DB wont connect');
-    process.exit(1);
+    process.exit();
   } else {
     app.listen(3000, () => {
       console.log('Magic is happening...');
