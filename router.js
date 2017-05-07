@@ -3,7 +3,7 @@ const router = express.Router();
 
 const db = require('./db.js');
 
-router.get('/music', (req, res) => {
+router.get('/getMusic', (req, res) => {
   let collection = db.get().collection('music');
 
   collection.find().toArray((err, docs) => {
@@ -11,7 +11,7 @@ router.get('/music', (req, res) => {
   });
 });
 
-router.get('/photos', (req, res) => {
+router.get('/getPhotos', (req, res) => {
   let collection = db.get().collection('photos');
 
   collection.find().toArray((err, docs) => {
@@ -19,7 +19,7 @@ router.get('/photos', (req, res) => {
   });
 });
 
-router.get('/tourDates', (req, res) => {
+router.get('/getTourDates', (req, res) => {
   let collection = db.get().collection('tourDates');
 
   collection.find().toArray((err, docs) => {
