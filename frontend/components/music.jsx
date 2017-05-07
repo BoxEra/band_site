@@ -4,7 +4,7 @@ class Music extends React.Component {
   render() {
     return(
       <div>
-
+        Music
       </div>
     );
   }

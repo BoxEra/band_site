@@ -4,7 +4,7 @@ class Photos extends React.Component {
   render() {
     return(
       <div>
-
+        Photos
       </div>
     );
   }
