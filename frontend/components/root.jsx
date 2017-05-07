@@ -1,13 +1,14 @@
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './header.jsx';
 
 const Root = () => {
   return(
-    <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
-      <Route path='/' component={Header}>
-
-      </Route>
-    </Router>
+    <BrowserRouter>
+      <div>
+        <Route path='/' component={Header}/>
+      </div>
+    </BrowserRouter>
   );
 };
 
