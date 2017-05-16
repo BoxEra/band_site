@@ -41,7 +41,7 @@ class App extends React.Component {
         </ul>
 
         <Route path='/home' component={Home}/>
-        <Route path='/about_us' component={AboutUs}/>
+        <Route path='/about-us' component={AboutUs}/>
         <Route path='/gigs' component={Gigs}/>
         <Route path='/contact' component={Contact}/>
 
