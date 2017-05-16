@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
   entry: './frontend/entry.jsx',
   output: {
@@ -12,7 +14,16 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+         test: /\.scss$/,
+         loader: ExtractTextPlugin.extract('css!sass')
       }
+    ],
+    plugins: [
+      new ExtractTextPlugin('public/style.css', {
+          allChunks: true
+      })
     ]
   },
   devtool: 'source-map',
