@@ -23,6 +23,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "cors": "^2.8.3",
+    "css-loader": "^0.28.1",
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
     "path": "^0.12.7",
@@ -30,6 +31,8 @@
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
     "webpack": "^2.5.1"
   }
 }
