@@ -6,4 +6,8 @@ body * {
   display: flex;
   justify-content: space-between; }
 
+.album-cover {
+  width: 150px;
+  height: 150px;
+}
 /*# sourceMappingURL=output.css.map */
