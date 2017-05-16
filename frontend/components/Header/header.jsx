@@ -22,7 +22,7 @@ const Header = withRouter(({
       <div className={'headerLink'} onClick={() => updateActiveRoute('/about-us')}>
         {'ABOUT US'}
       </div>
-      <img src={'../../images/box_era_logo.png'} onClick={() => updateActiveRoute('/')}/>
+      <div className={'centerLogo'}>{'box era'}</div>
       <div className={'headerLink'} onClick={() => updateActiveRoute('/gigs')}>
         {'GIGS'}
       </div>

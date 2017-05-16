@@ -21,7 +21,7 @@ const App = withRouter(({
   const isHomePage = (window.location.pathname === '/');
   return (
     <div>
-      {isHomePage && (<img src={'../images/box_era_splash.png'} />)}
+      {isHomePage && <div className={'splashWrapper'}>{'splash'}</div>}
       <div ref={'header'}>
         <Header />
       </div>
