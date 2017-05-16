@@ -24,10 +24,12 @@
     "babel-preset-react": "^6.24.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
     "mongodb": "^2.2.26",
     "path": "^0.12.7",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-player": "^0.18.0",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "webpack": "^2.5.1"
