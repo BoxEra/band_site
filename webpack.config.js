@@ -1,5 +1,3 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
   entry: './frontend/entry.jsx',
   output: {
@@ -16,15 +14,10 @@ module.exports = {
         }
       },
       {
-         test: /\.scss$/,
-         loader: ExtractTextPlugin.extract('css!sass')
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ],
-    plugins: [
-      new ExtractTextPlugin('public/style.css', {
-          allChunks: true
-      })
-    ]
   },
   devtool: 'source-map',
   resolve: {
