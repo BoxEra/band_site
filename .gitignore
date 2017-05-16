@@ -2,3 +2,4 @@ node_modules
 .jshintrc
 bundle.js
 bundle.js.map
+.sass-cache
