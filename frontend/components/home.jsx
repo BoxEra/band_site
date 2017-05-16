@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Tour extends React.Component {
+class Home extends React.Component {
   render() {
     return(
       <div>
-        Tour
+        <h1>HOME</h1>
       </div>
     );
   }
 }
 
-export default Tour;
+export default Home;

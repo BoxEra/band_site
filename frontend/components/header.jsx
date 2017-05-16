@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import Tour from './tour.jsx';
-import Music from './music.jsx';
-import Photos from './photos.jsx';
+import Home from './home.jsx';
+import AboutUs from './about_us.jsx';
+import Gigs from './gigs.jsx';
 import Contact from './contact.jsx';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageViewed: 'tour'
+      pageViewed: 'home'
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -22,9 +22,9 @@ class Header extends React.Component {
 
   handleClick(e) {
     if (e.target.nodeName === 'LI') {
-      this.props.history.replace(`/${e.target.innerHTML}`);
+      this.props.history.replace(`/${e.target.id}`);
       this.setState({
-        pageViewed: e.target.innerHTML
+        pageViewed: e.target.id
       });
     }
   }
@@ -33,15 +33,18 @@ class Header extends React.Component {
     return (
       <div>
         <ul onClick={this.handleClick}>
-          <li>tour</li>
-          <li>music</li>
-          <li>photos</li>
-          <li>contact</li>
+          <li id="home">HOME</li>
+          <li id="about_us">ABOUT US</li>
+          <img></img>
+          <li id="gigs">GIGS</li>
+          <li id="contact">CONTACT</li>
         </ul>
-        <Route path='/tour' component={Tour}/>
-        <Route path='/music' component={Music}/>
-        <Route path='/photos' component={Photos}/>
+
+        <Route path='/home' component={Home}/>
+        <Route path='/about_us' component={AboutUs}/>
+        <Route path='/gigs' component={Gigs}/>
         <Route path='/contact' component={Contact}/>
+
       </div>
     );
   }
