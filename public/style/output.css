@@ -1,9 +1,5 @@
 body * {
-  font-family: sans-serif; }
-
-.header {
-  list-style: none;
-  display: flex;
-  justify-content: space-between; }
+  font-family: sans-serif;
+}
 
 /*# sourceMappingURL=output.css.map */

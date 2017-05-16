@@ -5,10 +5,14 @@
   justify-content: space-around;
 
   width: 100%;
-  border-bottom: 2px solid blue;
 }
 
 .headerLink {
   cursor: pointer;
   text-transform: uppercase;
+
+  &.headerLinkActive {
+    color: #d5277f;
+    border-bottom: 3px solid #d5277f;
+  }
 }

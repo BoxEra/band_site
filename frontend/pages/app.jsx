@@ -11,27 +11,28 @@ import Contact from './Contact/contact.jsx';
 import Header from '../components/Header/header';
 
 
-const App = withRouter(({
-  history,
-}) => {
-  const scrollToHeader = () => {
-    return;
-  };
+class App extends Component {
 
-  const isHomePage = (window.location.pathname === '/');
-  return (
-    <div>
-      {isHomePage && <div className={'splashWrapper'}>{'splash'}</div>}
-      <div ref={'header'}>
-        <Header />
+  // scrollToHeader() => {
+  //   return;
+  // };
+
+  render() {
+    const isHomePage = (window.location.pathname === '/');
+    return (
+      <div>
+        {isHomePage && <div className={'splashWrapper'}>{'splash'}</div>}
+        <div ref={'header'}>
+          <Header />
+        </div>
+        <Route path='/' component={Home}/>
+        <Route path='/about-us' component={AboutUs}/>
+        <Route path='/gigs' component={Gigs}/>
+        <Route path='/contact' component={Contact}/>
       </div>
-      <Route path='/' component={Home}/>
-      <Route path='/about-us' component={AboutUs}/>
-      <Route path='/gigs' component={Gigs}/>
-      <Route path='/contact' component={Contact}/>
-    </div>
-  );
-});
+    );
+  }
+}
 
 const AppWithRouter = withRouter(App);
 
