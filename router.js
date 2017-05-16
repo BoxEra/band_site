@@ -4,6 +4,7 @@ const router = express.Router();
 const db = require('./db.js');
 
 router.get('/getMusic', (req, res) => {
+  console.log('getting music');
   let collection = db.get().collection('music');
 
   collection.find().toArray((err, docs) => {
