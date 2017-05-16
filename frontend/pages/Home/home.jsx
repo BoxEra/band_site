@@ -6,7 +6,7 @@ import MusicPlayer from './music_player';
 import ReactPlayer from 'react-player';
 
 // actions
-import * as Util from '../actions/actions';
+import * as Util from '../../actions/actions';
 
 class Home extends React.Component {
   constructor(props) {
