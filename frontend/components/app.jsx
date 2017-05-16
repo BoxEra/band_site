@@ -6,7 +6,7 @@ import AboutUs from './about_us.jsx';
 import Gigs from './gigs.jsx';
 import Contact from './contact.jsx';
 
-class Header extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <ul onClick={this.handleClick}>
+        <ul className="header" onClick={this.handleClick}>
           <li id="home">HOME</li>
           <li id="about_us">ABOUT US</li>
           <img></img>
@@ -50,4 +50,4 @@ class Header extends React.Component {
   }
 }
 
-export default withRouter(Header);
+export default withRouter(App);
