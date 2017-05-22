@@ -25,7 +25,7 @@ class App extends Component {
         <div ref={'header'}>
           <Header />
         </div>
-        <Route path='/' component={Home}/>
+        <Route exact path='/' component={Home}/>
         <Route path='/about-us' component={AboutUs}/>
         <Route path='/gigs' component={Gigs}/>
         <Route path='/contact' component={Contact}/>

@@ -1,6 +1,10 @@
 import React from 'react';
 import { ajax } from 'jquery';
 
+import classnames from 'classnames';
+
+import './gigs.scss';
+
 class Gigs extends React.Component {
   constructor() {
     super();
@@ -8,6 +12,8 @@ class Gigs extends React.Component {
     this.state = {
       tourDates: []
     };
+
+    this.isInPast = this.isInPast.bind(this);
   }
 
   componentWillMount() {
@@ -20,21 +26,34 @@ class Gigs extends React.Component {
     });
   }
 
+  isInPast(today, date) {
+    return (date < today);
+  }
+
   render() {
+    let today = new Date();
+    let month = today.getMonth() < 9 ? '0' + (today.getMonth() + 1) : today.getMonth() + 1;
+    let day = today.getDate() < 10 ? '0' + today.getDate() : today.getDate();
+
+    today = `${month}-${day}-${today.getFullYear()}`;
+
     let tourDates = this.state.tourDates.map((gig, idx) => {
+      let date = gig.date.split('-');
+      date = `${parseInt(date[0])}/${parseInt(date[1])}`;
       return (
-        <div className='tourDate' key={idx}>
-          <div>{gig.date.split('-').slice(0,2).join('/')}</div>
-          <div>{gig.venue}</div>
-          <div>{gig.location}</div>
-          <a href={gig.link} className={gig.link ? '' : 'deadLink'}>Link</a>
+        <div className={classnames('tourDate')} key={idx}>
+          <div className={classnames('tourDateStrikeThrough', this.isInPast(today, gig.date) && 'tourDateHasPast')}></div>
+          <div className={'tourDay'}>{date}</div>
+          <div className={'tourVenue'}>{gig.venue.toUpperCase()}</div>
+          <div className={'tourLocation'}>{gig.location.toUpperCase()}</div>
+          <a href={gig.link} className={classnames('tourLink', !gig.link && 'deadLink')}>LINK</a>
         </div>
       );
     });
 
     return(
-      <div>
-        <h1>UPCOMING GIGS</h1>
+      <div className={'gigsWrapper'}>
+        <h1 className={'gigsHeader'}>UPCOMING GIGS</h1>
         <ul className='toureDates'>
           {tourDates}
         </ul>

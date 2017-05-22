@@ -1,0 +1,63 @@
+.gigsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gigsHeader {
+  border-bottom: 4px solid black;
+  padding-bottom: 5px;
+}
+
+.tourDate {
+  position: relative;
+  display: flex;
+  padding: 4px 0;
+  border-top: 2px solid black;
+  width: 650px;
+
+  &:last-child {
+    border-bottom: 2px solid black;
+  }
+}
+
+.tourDay {
+  width: 35px;
+  font-weight: bold;
+}
+
+.tourVenue {
+  width: 40%;
+  margin-left: 75px;
+  font-weight: lighter;
+}
+
+.tourLocation {
+  width: 35%;
+  font-weight: lighter;
+}
+
+.tourLink {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+
+  &.deadLink {
+    color: lightgrey;
+    cursor: default;
+  }
+}
+
+.tourDateStrikeThrough {
+  position: absolute;
+  top: 40%;
+  left: -3%;
+  width: 106%;
+  z-index: 1;
+
+  &.tourDateHasPast {
+    border-top: 3px solid #e91e8f;
+  }
+}
