@@ -29,7 +29,6 @@ class AboutUs extends React.Component {
             is the story of five boys wandering the halls of Xanadu, forever in search of sweet cream.
           </p>
         </div>
-
       </div>
     );
   }

@@ -10,13 +10,9 @@ $text-color: white;
   }
 }
 
-.aboutUsHeader {
-  border-bottom: 4px solid $text-color;
-  padding-bottom: 5px;
-}
-
 .aboutUsBody {
-  width: 680px;
+  width: 400px;
   font-size: 18px;
   text-align: center;
+  line-height: 22px;
 }
