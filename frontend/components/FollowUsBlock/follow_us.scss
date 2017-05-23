@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 100%;
-  background-color: black;
+  background-color: #111;
   color: white;
 }
 
@@ -32,4 +33,19 @@
   .hoverIcon {
     display: block;
   }
+}
+
+.planet1 {
+  position: absolute;
+  top: -75px;
+  right: 5px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+
+.planet2 {
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  height: 50px;
 }

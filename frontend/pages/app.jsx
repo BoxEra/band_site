@@ -28,7 +28,7 @@ const Splash = ({ scroll }) => (
 class App extends Component {
 
   scrollToHeader() {
-    scroll.scrollTo(680);
+    scroll.scrollTo(676.5);
   }
 
   render() {

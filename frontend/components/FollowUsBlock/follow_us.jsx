@@ -25,6 +25,9 @@ class FollowUs extends React.Component {
             <img className={'hoverIcon'} src={'https://s3.amazonaws.com/boxera/icons/facebook_hover.png'}/>
           </a>
         </div>
+
+        <img className={'planet1'} src={'https://s3.amazonaws.com/boxera/space_imgs/exoplanet1.png'}></img>
+        <img className={'planet2'} src={'https://s3.amazonaws.com/boxera/space_imgs/exoplanet2.png'}></img>
       </div>
     );
   }
