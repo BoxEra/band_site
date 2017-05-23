@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'BebasNeueBook';
+  font-family: 'BebasNeue';
   src: url("./BebasNeueBook.otf") format("opentype"); }
 @font-face {
-  font-family: 'BebasNeueBold';
+  font-family: 'BebasNeue';
   font-weight: bold;
   src: url("./BebasNeueBold.otf") format("opentype"); }
 body * {
-  font-family: 'BebasNeueBook' sans-serif;
+  font-family: 'BebasNeue';
   margin: 0; }
 
 /*# sourceMappingURL=output.css.map */
