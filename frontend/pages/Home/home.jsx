@@ -8,6 +8,8 @@ import ReactPlayer from 'react-player';
 // actions
 import * as Util from '../../actions/actions';
 
+import './home.scss';
+
 class Home extends React.Component {
   constructor(props) {
     super(props);

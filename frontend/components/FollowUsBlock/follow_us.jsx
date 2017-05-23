@@ -9,7 +9,7 @@ class FollowUs extends React.Component {
   render() {
     return (
       <div>
-        
+        <h1>FOLLOW US</h1>
       </div>
     );
   }

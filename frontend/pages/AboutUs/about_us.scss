@@ -1,0 +1,14 @@
+.aboutUsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    font-weight: lighter;
+  }
+}
+
+.aboutUsHeader {
+  border-bottom: 4px solid black;
+  padding-bottom: 5px;
+}

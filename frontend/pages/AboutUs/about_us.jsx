@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './about_us.scss';
+
 class AboutUs extends React.Component {
   constructor() {
     super();
@@ -7,8 +9,8 @@ class AboutUs extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>ABOUT US</h1>
+      <div className={'aboutUsWrapper'}>
+        <h1 className={'aboutUsHeader'}>ABOUT US</h1>
 
         <p>
           Risen from the ashes of keg-fueled house parties and sweaty bars of College Park, MD, Box Era has

@@ -1,20 +1,6 @@
-body * {
+body {
   font-family: sans-serif;
-}
-
-.album {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-
-.album-cover {
-  width: 150px;
-  height: 150px;
-}
-
-.track:hover {
-  cursor: pointer;
+  margin: 0;
 }
 
 /*# sourceMappingURL=output.css.map */
