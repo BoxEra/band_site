@@ -3,11 +3,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: auto;
   width: 100%;
 }
 
 #header-image {
-  width: 750px;
+  width: 700px;
   height: auto;
+}
+
+.header-title {
+  color: white;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.scroll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scroll-container:hover {
+  cursor: pointer;
+}
+
+.scroll-text {
+  color: white;
+  font-size: 40px;
+}
+
+.fa-angle-down {
+  color: white;
+  font-weight: lighter;
 }

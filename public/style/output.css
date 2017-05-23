@@ -5,6 +5,10 @@
   font-family: 'BebasNeue';
   font-weight: bold;
   src: url("./BebasNeueBold.otf") format("opentype"); }
+@font-face {
+  font-family: 'BebasNeue';
+  font-weight: lighter;
+  src: url("./BebasNeueThin.otf") format("opentype"); }
 body {
   font-family: 'BebasNeue';
   margin: 0; }
