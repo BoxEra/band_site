@@ -13,6 +13,7 @@
 .headerLink {
   cursor: pointer;
   text-transform: uppercase;
+  font-weight: bold;
 
   &.headerLinkActive {
     color: #e91e8f;
