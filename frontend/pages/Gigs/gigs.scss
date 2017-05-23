@@ -1,3 +1,5 @@
+$text-color: white;
+
 .gigsWrapper {
   display: flex;
   flex-direction: column;
@@ -5,19 +7,20 @@
 }
 
 .gigsHeader {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid $text-color;
   padding-bottom: 5px;
 }
 
 .tourDate {
   position: relative;
   display: flex;
-  padding: 4px 0;
-  border-top: 2px solid black;
+  padding: 6px 0 4px 0;
+  border-top: 2px solid $text-color;
   width: 650px;
+  font-size: 20px;
 
   &:last-child {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $text-color;
   }
 }
 
@@ -39,11 +42,11 @@
   position: absolute;
   right: 0;
   font-weight: bold;
-  color: black;
+  color: $text-color;
   text-decoration: none;
 
   &.deadLink {
-    color: lightgrey;
+    color: grey;
     cursor: default;
     pointer-events: none;
   }

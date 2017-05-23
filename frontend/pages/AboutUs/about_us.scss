@@ -1,3 +1,5 @@
+$text-color: white;
+
 .aboutUsWrapper {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,12 @@
 }
 
 .aboutUsHeader {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid $text-color;
   padding-bottom: 5px;
+}
+
+.aboutUsBody {
+  width: 680px;
+  font-size: 18px;
+  text-align: center;
 }
