@@ -10,6 +10,13 @@ import Contact from './Contact/contact.jsx';
 
 import Header from '../components/Header/header';
 
+import './app.scss';
+
+const Splash = () => (
+  <div className={'splashWrapper'}>
+    <img id='header-image' src='https://s3.amazonaws.com/boxera/box_era_stylized_large.png' />
+  </div>
+);
 
 class App extends Component {
 
@@ -19,9 +26,10 @@ class App extends Component {
 
   render() {
     const isHomePage = (window.location.pathname === '/');
+
     return (
       <div>
-        {isHomePage && <div className={'splashWrapper'}>{'splash'}</div>}
+        {isHomePage && <Splash />}
         <div ref={'header'}>
           <Header />
         </div>
