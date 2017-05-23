@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './contact.scss';
+
 class Contact extends React.Component {
   render() {
     return(
-      <div>
-        <h1>CONTACT</h1>
+      <div className={'contactWrapper'}>
+        <h1 className={'contactHeader'}>CONTACT</h1>
       </div>
     );
   }

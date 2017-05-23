@@ -47,6 +47,7 @@
   &.deadLink {
     color: lightgrey;
     cursor: default;
+    pointer-events: none;
   }
 }
 
