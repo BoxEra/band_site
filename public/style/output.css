@@ -7,12 +7,21 @@
   src: url("./BebasNeueBold.otf") format("opentype"); }
 @font-face {
   font-family: 'BebasNeue';
+  font-weight: 500;
+  src: url("./BebasNeueRegular.otf") format("opentype"); }
+@font-face {
+  font-family: 'BebasNeue';
   font-weight: lighter;
   src: url("./BebasNeueThin.otf") format("opentype"); }
 body {
   font-family: 'BebasNeue';
   margin: 0;
-  background-color: #111;
+  background-color: #222;
   color: white; }
+
+h1 {
+  border-bottom: 4px solid white;
+  font-weight: 500;
+  font-size: 40px; }
 
 /*# sourceMappingURL=output.css.map */

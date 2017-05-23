@@ -34,7 +34,7 @@ const Header = withRouter(({
       >
         {'ABOUT US'}
       </div>
-      <div className={'centerLogo'}>{'box era'}</div>
+      <div className={'centerLogo'}><img src={'https://s3.amazonaws.com/boxera/box_era_logo.png'}></img></div>
       <div
         className={classnames('headerLink', isActiveRoute('/gigs') && 'headerLinkActive')}
         onClick={() => updateActiveRoute('/gigs')}
