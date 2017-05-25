@@ -55,7 +55,7 @@ class Gigs extends React.Component {
       <div className={'gigsWrapper'}>
         <h1 className={'gigsHeader'}>UPCOMING GIGS</h1>
         <ul className='tourDates'>
-          <img className={'satellite'} src={'https://s3.amazonaws.com/boxera/space_imgs/satellite_large.png'}></img>
+          <img className={'satellite'} src={'https://s3.amazonaws.com/boxera/space_imgs/satellite.png'}></img>
           {tourDates}
         </ul>
       </div>
