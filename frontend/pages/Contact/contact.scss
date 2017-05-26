@@ -13,7 +13,7 @@
 }
 
 .contactSenderContainer {
-  width: 570px;
+  width: 650px;
   padding-left: 40px;
   padding-right: 40px;
   display: flex;
@@ -26,13 +26,36 @@
   width: 255px;
   border-style: none;
   border-radius: 2px;
+  font-size: 15px;
 }
 
 .contactSenderMessage {
-  width: 540px;
+  width: 620px;
   height: 150px;
   padding: 10px;
   padding-left: 20px;
   border-style: none;
   border-radius: 2px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.contactSendButton {
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  border-radius: 2px;
+  color: white;
+  border: 1px solid white;
+  font-size: 24px;
+  font-family: 'BebasNeue';
+  font-weight: bolder;
+  background: linear-gradient(to right, #e91e8f , #416eb6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSendButton:hover {
+  cursor: pointer;
 }
