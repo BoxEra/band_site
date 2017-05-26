@@ -21,7 +21,7 @@ db.connect(URL, (err) => {
     console.log('Fuck! DB wont connect');
     process.exit();
   } else {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log('Magic is happening...');
     });
   }

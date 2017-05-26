@@ -22,24 +22,37 @@
 }
 
 .contactSenderForm {
-  padding: 10px 0px 10px 20px;
-  width: 255px;
+  padding: 10px 0px 7px 10px;
+  width: 46.5%;
   border-style: none;
   border-radius: 2px;
   font-size: 18px;
   font-family: 'BebasNeue';
+  font-weight: 500;
+
+  &::placeholder {
+    color: grey;
+    font-weight: 400;
+  }
 }
 
 .contactSenderMessage {
-  width: 620px;
+  width: 630px;
   height: 150px;
   padding: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
   border-style: none;
   border-radius: 2px;
   margin-bottom: 25px;
   font-size: 18px;
   font-family: 'BebasNeue';
+  font-weight: 500;
+  resize: none;
+
+  &::placeholder {
+    color: grey;
+    font-weight: 400;
+  }
 }
 
 .contactSendButton {
@@ -53,9 +66,7 @@
   font-family: 'BebasNeue';
   font-weight: bolder;
   background: linear-gradient(to right, #e91e8f , #416eb6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 7px;
 }
 
 .contactSendButton:hover {

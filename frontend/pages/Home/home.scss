@@ -13,23 +13,24 @@
 
 .music-player-container {
   background-color: #1A1A1A;
-  margin-bottom: 25px;
-  width: 650px;
+  margin-bottom: 40px;
+  width: 575px;
   border-radius: 2px;
-  padding: 10px;
+  padding: 25px 55px;
 }
 
 .album {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin: 35px 0;
 }
 
 .album-cover {
   width: 100px;
   height: 100px;
-  margin: 0 10px;
+  border: 1px solid lightgrey;
 }
 
 .tracks-container {
@@ -41,9 +42,9 @@
 
 .track {
   color: white;
-  width: 500px;
-  border-bottom: 1px solid white;
-  margin-bottom: 2px;
+  width: 450px;
+  border-top: 1px solid grey;
+  padding: 5px 0px 5px 1px;
 }
 
 .track:hover {
