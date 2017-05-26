@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Scroll from 'react-scroll';
-const scroll = Scroll.animateScroll;
 
 import Home from './Home/home.jsx';
 import AboutUs from './AboutUs/about_us.jsx';
@@ -28,7 +27,12 @@ const Splash = ({ scroll }) => (
 class App extends Component {
 
   scrollToHeader() {
-    scroll.scrollTo(676.5);
+    Scroll.scroller.scrollTo('myScrollToHeader', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      containerId: 'ContainerElementID'
+    });
   }
 
   render() {
