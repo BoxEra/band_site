@@ -31,6 +31,7 @@ class Contact extends React.Component {
         <div>
           <button className='contactSendButton' onClick={this.handleSubmit}>Send</button>
         </div>
+        <img className={'spacecraft'} src={'https://s3.amazonaws.com/boxera/spacecraft_large.png'}></img>
       </div>
     );
   }

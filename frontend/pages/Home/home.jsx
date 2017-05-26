@@ -60,8 +60,10 @@ class Home extends React.Component {
         <MusicPlayer
           music={state.music}
           trackToggle={this.handleTrackToggle}
+          url={state.url}
+          playing={state.playing}
         />
-        <FollowUs/>
+        <FollowUs />
         <ReactPlayer
           url={state.url}
           playing={state.playing}
