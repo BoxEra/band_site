@@ -35,12 +35,12 @@ router.get('/sendEmail', (req, res) => {
       service: 'Gmail',
       auth: {
           user: "contact@boxeramusic.com",
-          pass: "sweetCreamFunk"
+          pass: ""
       }
   });
 
   const mailOpts = {
-     from: 'test@example.com', 
+     from: 'test@example.com',
      to: 'contact@boxeramusic.com',
      subject: 'Website contact form',
      text: 'test'
