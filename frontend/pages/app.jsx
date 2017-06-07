@@ -16,7 +16,7 @@ import './app.scss';
 const Splash = ({ scroll }) => (
   <div className={'splashWrapper'}>
     <img id='header-image' src='https://s3.amazonaws.com/boxera/box_era_stylized_large.png' />
-    <div className='header-title'><strong>THE KNOX EP</strong> COMING SOON</div>
+    <div className='header-title'><strong>THE KNOX EP</strong> JUNE 9th</div>
     <div className='scroll-container'>
       <div className='scroll-text' onClick={scroll}>SCROLL FOR MORE</div>
       <i className="fa fa-angle-down fa-3x" onClick={scroll} style={{ariaHidden: "true"}}></i>
