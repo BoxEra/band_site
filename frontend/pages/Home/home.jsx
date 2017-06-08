@@ -56,7 +56,7 @@ class Home extends React.Component {
     let state = this.state;
     return(
       <div className={'homeWrapper'}>
-        <h1 className={'homeHeader'}>HOME</h1>
+        <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/YYNOlSBgg50"} frameBorder={"0"} allowFullScreen></iframe>
         <MusicPlayer
           music={state.music}
           trackToggle={this.handleTrackToggle}
