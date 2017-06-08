@@ -17,6 +17,7 @@ body {
   font-family: 'BebasNeue';
   margin: 0;
   background-color: #1A1A1A;
+  min-height: 450px;
   color: white; }
 
 h1 {
