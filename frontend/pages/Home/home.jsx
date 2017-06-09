@@ -25,7 +25,7 @@ class Home extends React.Component {
 
   componentWillMount() {
     Util.getMusic().then((music) => {
-      this.setState(reverse(music));
+      this.setState({music: reverse(music.music)});
     });
   }
 
