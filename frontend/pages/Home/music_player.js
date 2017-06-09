@@ -1,4 +1,5 @@
 import React from 'react';
+import { reverse } from 'lodash';
 
 const Track = ({ track, trackToggle }) => {
   const handleClick = () => {
@@ -27,7 +28,7 @@ const MusicPlayer = ({ music, trackToggle }) => (
   <div className='music-player-container'>
     {(music) ? (
       <div className='albums-container'>
-        {music.map((album, idx) => (
+        {reverse(music).map((album, idx) => (
           <Album key={'album' + idx}
             album={album}
             trackToggle={trackToggle}
