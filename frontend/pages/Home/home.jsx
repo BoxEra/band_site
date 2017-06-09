@@ -1,5 +1,5 @@
 import React from 'react';
-import { bindAll } from 'lodash';
+import { bindAll, reverse } from 'lodash';
 
 // components
 import MusicPlayer from './music_player';
@@ -25,7 +25,7 @@ class Home extends React.Component {
 
   componentWillMount() {
     Util.getMusic().then((music) => {
-      this.setState(music);
+      this.setState(reverse(music));
     });
   }
 
