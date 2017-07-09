@@ -10,7 +10,7 @@ class Photos extends React.Component {
   render() {
     return(
       <div className={'photosWrapper'}>
-        <h1 className={'photosHeader'}>ABOUT US</h1>
+        <h1 className={'photosHeader'}>PHOTOS</h1>
 
         <div className={'photosBody'}>
         </div>

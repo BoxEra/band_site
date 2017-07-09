@@ -54,7 +54,7 @@ const Header = withRouter(({
         >
           {'CONTACT'}
         </div>
-        <a href={'https://squareup.com/store/box-era'}>
+        <a href={'https://squareup.com/store/box-era'} target={"_blank"}>
         <div
           className={classnames('headerLink', isActiveRoute('/contact') && 'headerLinkActive')}
         >
