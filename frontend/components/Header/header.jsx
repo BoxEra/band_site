@@ -35,6 +35,12 @@ const Header = withRouter(({
         >
           {'ABOUT US'}
         </div>
+        <div
+          className={classnames('headerLink', isActiveRoute('/photos') && 'headerLinkActive')}
+          onClick={() => updateActiveRoute('/photos')}
+        >
+          {'PHOTOS'}
+        </div>
         <div className={'centerLogo'}><img src={'https://s3.amazonaws.com/boxera/box_era_logo.png'}></img></div>
         <div
           className={classnames('headerLink', isActiveRoute('/gigs') && 'headerLinkActive')}
@@ -48,6 +54,13 @@ const Header = withRouter(({
         >
           {'CONTACT'}
         </div>
+        <a href={'https://squareup.com/store/box-era'}>
+        <div
+          className={classnames('headerLink', isActiveRoute('/contact') && 'headerLinkActive')}
+        >
+          {'MERCH'}
+        </div>
+        </a>
       </div>
     </Element>
   );

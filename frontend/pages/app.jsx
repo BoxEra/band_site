@@ -8,7 +8,7 @@ import Home from './Home/home.jsx';
 import AboutUs from './AboutUs/about_us.jsx';
 import Gigs from './Gigs/gigs.jsx';
 import Contact from './Contact/contact.jsx';
-
+import Photos from './photos/photos.js';
 import Header from '../components/Header/header';
 
 import './app.scss';
@@ -46,6 +46,7 @@ class App extends Component {
         </div>
         <Route exact path='/' component={Home}/>
         <Route path='/about-us' component={AboutUs}/>
+        <Route path='/photos' component={Photos}/>
         <Route path='/gigs' component={Gigs}/>
         <Route path='/contact' component={Contact}/>
       </div>

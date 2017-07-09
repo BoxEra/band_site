@@ -47,11 +47,11 @@ router.get('/sendEmail', (req, res) => {
  };
 
  smtpTrans.sendMail(mailOpts, function (error, response) {
-      //Email not sent
+      // Email not sent
       if (error) {
           res.status(500).json(error);
       }
-      //Yay!! Email sent
+      // Yay!! Email sent
       else {
           res.json(response);
       }

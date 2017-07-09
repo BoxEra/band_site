@@ -1,0 +1,19 @@
+$text-color: white;
+
+.photosWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+}
+
+.photosBody {
+  width: 670px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 22px;
+}
