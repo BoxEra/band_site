@@ -59,14 +59,14 @@ $text-color: white;
   }
 }
 
-.tourDateStrikeThrough {
-  position: absolute;
-  top: 40%;
-  left: -3%;
-  width: 106%;
-  z-index: 1;
-
-  &.tourDateHasPast {
-    border-top: 3px solid #e91e8f;
-  }
-}
+// .tourDateStrikeThrough {
+//   position: absolute;
+//   top: 40%;
+//   left: -3%;
+//   width: 106%;
+//   z-index: 1;
+//
+//   &.tourDateHasPast {
+//     border-top: 3px solid #e91e8f;
+//   }
+// }
