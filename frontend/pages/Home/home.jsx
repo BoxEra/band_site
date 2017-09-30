@@ -57,7 +57,7 @@ class Home extends React.Component {
     return(
       <div className={'homeWrapper'}>
         <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/YYNOlSBgg50"} frameBorder={"0"} allowFullScreen></iframe>
-        <strong>Videography by Jorge Castillo and Lez Tireur</strong>
+        <strong>Videography by Jorge Castillo and Lex Tireur</strong>
         <strong>Rent and audio provided by Loud Dudes</strong>
         <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/eVW1qOmTG4I"} frameBorder={"0"} allowFullScreen></iframe>
         <strong>Credit to Brandon Russell and Sheen Radpants Productions</strong>
