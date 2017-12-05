@@ -54,7 +54,7 @@ class Home extends React.Component {
 
   render() {
     let state = this.state;
-    return(
+    return (
       <div className={'homeWrapper'}>
         <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/KAooJPXAsT0"} frameBorder={"0"} allowFullScreen></iframe>
         <strong></strong>
@@ -77,7 +77,6 @@ class Home extends React.Component {
           playing={state.playing}
           style={{display: 'none'}}
         />
-
       </div>
     );
   }
