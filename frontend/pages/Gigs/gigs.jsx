@@ -40,15 +40,33 @@ class Gigs extends React.Component {
     let tourDates = this.state.tourDates.map((gig, idx) => {
       let date = gig.date.split('-');
       date = `${parseInt(date[0])}/${parseInt(date[1])}`;
-      return (
-        <div className={classnames('tourDate')} key={idx}>
+      if (!this.isInPast(today, gig.date)) {
+        return (
+          <div className={classnames('tourDate')} key={idx}>
           <div className={classnames('tourDateStrikeThrough', this.isInPast(today, gig.date) && 'tourDateHasPast')}></div>
           <div className={'tourDay'}>{date}</div>
           <div className={'tourVenue'}>{gig.venue.toUpperCase()}</div>
           <div className={'tourLocation'}>{gig.location.toUpperCase()}</div>
           <a href={gig.link} className={classnames('tourLink', !gig.link && 'deadLink')}>LINK</a>
-        </div>
-      );
+          </div>
+        );
+      }
+    });
+
+    let oldTourDates = this.state.tourDates.map((gig, idx) => {
+      let date = gig.date.split('-');
+      date = `${parseInt(date[0])}/${parseInt(date[1])}`;
+      if (this.isInPast(today, gig.date)) {
+        return (
+          <div className={classnames('tourDate')} key={idx}>
+          <div className={classnames('tourDateStrikeThrough', this.isInPast(today, gig.date) && 'tourDateHasPast')}></div>
+          <div className={'tourDay'}>{date}</div>
+          <div className={'tourVenue'}>{gig.venue.toUpperCase()}</div>
+          <div className={'tourLocation'}>{gig.location.toUpperCase()}</div>
+          <a href={gig.link} className={classnames('tourLink', !gig.link && 'deadLink')}>LINK</a>
+          </div>
+        );
+      }
     });
 
     return(
@@ -57,6 +75,11 @@ class Gigs extends React.Component {
         <ul className='tourDates'>
           <img className={'satellite'} src={'https://s3.amazonaws.com/boxera/space_imgs/satellite.png'}></img>
           {tourDates}
+        </ul>
+
+        <h1 className={'gigsHeader'}>PAST GIGS</h1>
+        <ul className='tourDates'>
+          {oldTourDates}
         </ul>
       </div>
     );
