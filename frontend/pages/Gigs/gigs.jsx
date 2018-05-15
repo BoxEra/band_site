@@ -27,7 +27,7 @@ class Gigs extends React.Component {
   }
 
   isInPast(today, date) {
-    return (date < today);
+    return (new Date(date) < new Date(today));
   }
 
   render() {
@@ -38,6 +38,7 @@ class Gigs extends React.Component {
     today = `${month}-${day}-${today.getFullYear()}`;
 
     let tourDates = this.state.tourDates.map((gig, idx) => {
+      console.log(gig.date, this.isInPast(today, gig.date));
       let date = gig.date.split('-');
       date = `${parseInt(date[0])}/${parseInt(date[1])}`;
       if (!this.isInPast(today, gig.date)) {
