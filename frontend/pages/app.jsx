@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-
+import ReactDOM from 'react';
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import Scroll from 'react-scroll';
 
 import Home from './Home/home.jsx';
 import AboutUs from './AboutUs/about_us.jsx';
@@ -25,13 +24,19 @@ const Splash = ({ scroll }) => (
 );
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.element = null;
+
+    this.scrollToHeader = this.scrollToHeader.bind(this);
+  }
 
   scrollToHeader() {
-    Scroll.scroller.scrollTo('myScrollToHeader', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      containerId: 'ContainerElementID'
+    const headerNode = this.element;
+    window.scrollTo({
+      top: headerNode.offsetTop,
+      left: 0,
+      behavior: 'smooth'
     });
   }
 
@@ -41,7 +46,7 @@ class App extends Component {
     return (
       <div>
         {isHomePage && <Splash scroll={this.scrollToHeader}/>}
-        <div ref={'header'}>
+        <div ref={ ref => this.element = ref }>
           <Header />
         </div>
         <Route exact path='/' component={Home}/>
