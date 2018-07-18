@@ -1,18 +1,19 @@
 import React from 'react';
 
-import './about_us.scss';
+import './press-kit.scss';
 
-class AboutUs extends React.Component {
+class Photos extends React.Component {
   constructor() {
     super();
   }
 
   render() {
     return(
-      <div className={'aboutUsWrapper'}>
-        <h1 className={'aboutUsHeader'}>ABOUT US</h1>
-
-        <div className={'aboutUsBody'}>
+      <div className={'pressKitWrapper'}>
+        <div className={'pressKitBody'}>
+          <div className={'pressKitHeader'}>
+            <h1>BIO</h1>
+          </div>
           <p>
             Risen from the ashes of keg-fueled house parties and sweaty bars of College Park, MD, Box Era has
             planted itself as a staple in the up-and-coming DMV music scene. Creating a jam-inspired electro-pop
@@ -28,10 +29,33 @@ class AboutUs extends React.Component {
             magic, youth, and the most unique sound you’ve heard since The Bangles. Box Era is the story of
             five boys wandering the halls of Xanadu, forever in search of sweet cream.
           </p>
+
+          <hr></hr>
+
+          <div className={'pressKitHeader'}>
+            <h1>BLANK ADMAT</h1>
+          </div>
+
+          <div className="imagecontainer">
+            <img src="./img/box_era_art.jpg" />
+            <img src="./img/logo_blk.png" />
+            <img src="./img/logo_wht.png" />
+            <img src="./img/boxera_graphic.png" />
+            <img src="./img/maps_album_cover.jpg" />
+          </div>
+
+          <div className={'pressKitHeader'}>
+            <h1>PRESS PHOTOS</h1>
+          </div>
+
+          <div className="imagecontainer">
+            <img src="./img/venue.jpg" />
+            <img src="./img/basement.jpg" />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default AboutUs;
+export default Photos;

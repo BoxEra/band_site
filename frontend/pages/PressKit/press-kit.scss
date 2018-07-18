@@ -1,0 +1,42 @@
+$text-color: white;
+
+.pressKitWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  & hr {
+    width: 100%;
+  }
+}
+
+.pressKitBody {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 22px;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pressKitHeader {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imagecontainer {
+  column-count: 2;
+
+  & img {
+    width: 450px;
+  }
+}
