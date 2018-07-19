@@ -38,6 +38,7 @@ $text-color: white;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   & img {
     width: 45%;
