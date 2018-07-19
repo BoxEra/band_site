@@ -69,6 +69,8 @@ class Home extends React.Component {
           url={state.url}
           playing={state.playing}
         />
+        <iframe id="follow" src="https://open.spotify.com/follow/1/?uri=spotify:artist:7MIperBcogvkVTMs2D1XOC" height="27"></iframe>
+        <iframe className="spotify" src="https://open.spotify.com/embed/artist/7MIperBcogvkVTMs2D1XOC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <FollowUs />
         <ReactPlayer
           url={state.url}

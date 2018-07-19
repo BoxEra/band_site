@@ -13,7 +13,7 @@
 
 .music-player-container {
   background-color: #1A1A1A;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 20px;
   width: 575px;
   border-radius: 2px;
@@ -56,4 +56,9 @@
 .homePageVideo {
   margin-bottom: 5px;
   margin-top: 20px;
+}
+
+iframe {
+  border-width: 0px;
+  margin-bottom: 20px;
 }
