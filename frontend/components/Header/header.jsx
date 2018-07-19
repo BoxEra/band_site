@@ -56,7 +56,7 @@ const Header = withRouter(({
         </div>
         <a href={'https://squareup.com/store/box-era'} target={"_blank"}>
         <div
-          className={classnames('headerLink', isActiveRoute('/') && 'headerLinkActive')}
+          className={classnames('headerLink')}
         >
           {'MERCH'}
         </div>
