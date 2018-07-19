@@ -1,13 +1,39 @@
 import React from 'react';
+const contentful = require('contentful')
 
 import './press-kit.scss';
 
 class Photos extends React.Component {
   constructor() {
     super();
+    this.state = {
+      bands: []
+    };
+
+    this.client = contentful.createClient({
+      space: "7w7g699rgy3a",
+      accessToken: "6cf00910a832cfc7aea49aa3f79fdee889cadc6d8dc2955d073f6535e76e07d7"
+    });
+  }
+
+  componentDidMount() {
+    this.client.getEntries({ content_type: "bands" })
+      .then((response) => {
+        const bands = response.items.map((item) => {
+          return item.fields;
+        })
+
+        this.setBands(bands);
+      })
+  }
+
+  setBands(bands) {
+    this.setState({ bands });
   }
 
   render() {
+    const { bands } = this.state;
+
     return(
       <div className={'pressKitWrapper'}>
         <div className={'pressKitBody'}>
@@ -52,6 +78,22 @@ class Photos extends React.Component {
             <img src="./img/venue.jpg" />
             <img src="./img/basement.jpg" />
           </div>
+
+          <div className={'pressKitHeader'}>
+            <p>Box Era has played with the following bands:</p>
+          </div>
+          { bands
+            .map((band, index) => (
+              <div className="presslistitem" key={ index }>
+                <p className="listtitle">{ band.name }</p>
+                { band.website ? <a className="listlink" href={ band.website }>
+                  <p>website</p>
+                </a> : null }
+                { band.facebook ?<a className="listlink" href={ band.facebook }>
+                  <p>facebook</p>
+                </a> : null }
+              </div>
+            )) }
         </div>
       </div>
     );

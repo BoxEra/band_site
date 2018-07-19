@@ -40,3 +40,25 @@ $text-color: white;
     width: 450px;
   }
 }
+
+.presslistitem {
+  display: flex;
+  flex-direction: row;
+
+  & a {
+    color: white;
+    
+    & p {
+      margin-right: 4px;
+      font-weight: 100;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.listtitle {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 4px;
+}
