@@ -34,10 +34,13 @@ $text-color: white;
 }
 
 .imagecontainer {
-  column-count: 2;
+  // column-count: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   & img {
-    width: 450px;
+    width: 45%;
   }
 }
 

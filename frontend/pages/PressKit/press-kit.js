@@ -17,7 +17,7 @@ class Photos extends React.Component {
   }
 
   componentDidMount() {
-    this.client.getEntries({ content_type: "bands" })
+    this.client.getEntries({ content_type: "bands", order: "sys.createdAt" })
       .then((response) => {
         const bands = response.items.map((item) => {
           return item.fields;
