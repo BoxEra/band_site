@@ -7,7 +7,8 @@ class Photos extends React.Component {
   constructor() {
     super();
     this.state = {
-      bands: []
+      bands: [],
+      venues: []
     };
 
     this.client = contentful.createClient({
@@ -25,14 +26,29 @@ class Photos extends React.Component {
 
         this.setBands(bands);
       })
+    
+    this.client.getEntries({ content_type: "venues", order: "sys.createdAt" })
+      .then((response) => {
+        const venues = response.items.map((item) => {
+          return item.fields;
+        })
+
+        this.setVenues(venues);
+      })
   }
 
   setBands(bands) {
     this.setState({ bands });
   }
 
+  setVenues(venues) {
+    this.setState({ venues });
+  }
+
   render() {
-    const { bands } = this.state;
+    const { bands, venues } = this.state;
+
+    console.log(venues);
 
     return(
       <div className={'pressKitWrapper'}>
@@ -127,6 +143,17 @@ class Photos extends React.Component {
                 { band.facebook ?<a className="listlink" href={ band.facebook }>
                   <p>facebook</p>
                 </a> : null }
+              </div>
+            )) }
+
+          <div className={'pressKitHeader'}>
+            <p>Box Era has played at the following venues:</p>
+          </div>
+          { venues
+            .map((venue, index) => (
+              <div className="presslistitem" key={ index }>
+                <p className="listtitle">{venue.name}</p>
+                <p className="listtitle" style={ { fontWeight: 100 } }>{venue.location}</p>                
               </div>
             )) }
         </div>
