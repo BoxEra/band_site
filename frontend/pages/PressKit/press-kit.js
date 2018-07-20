@@ -63,11 +63,36 @@ class Photos extends React.Component {
           </div>
 
           <div className="imagecontainer">
-            <img src="./img/box_era_art.jpg" />
-            <img src="./img/logo_blk.png" />
-            <img src="./img/logo_wht.png" />
-            <img src="./img/boxera_graphic.png" />
-            <img src="./img/maps_album_cover.jpg" />
+            <div className="image">
+              <img src="./img/box_era_art.jpg" />
+              <a download="box_era_art.jpg" href="./img/box_era_art.jpg" title="BoxEraArt">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/logo_blk.png" />
+              <a download="logo_blk.png" href="./img/logo_blk.png" title="LogoBlack">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/logo_wht.png" />
+              <a download="logo_wht.png" href="./img/logo_wht.png" title="LogoWhite">
+                <p>Download File</p>
+              </a>
+            </div>       
+            <div className="image">
+              <img src="./img/boxera_graphic.png" />
+              <a download="boxera_graphic.png" href="./img/boxera_graphic.png" title="BoxEraGraphic">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/maps_album_cover.jpg" />
+              <a download="maps_album_cover.jpg" href="./img/maps_album_cover.jpg" title="MapsAlbumCover">
+                <p>Download File</p>
+              </a>
+            </div>
           </div>
 
           <div className={'pressKitHeader'}>
@@ -75,8 +100,18 @@ class Photos extends React.Component {
           </div>
 
           <div className="imagecontainer">
-            <img src="./img/venue.jpg" />
-            <img src="./img/basement.jpg" />
+            <div className="image">
+              <img src="./img/venue.jpg" />
+              <a download="venue.jpg" href="./img/venue.jpg" title="Venue">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/basement.jpg" />
+              <a download="basement.jpg" href="./img/basement.jpg" title="Basement">
+                <p>Download File</p>
+              </a>
+            </div>
           </div>
 
           <div className={'pressKitHeader'}>
