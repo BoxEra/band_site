@@ -8,7 +8,8 @@ class Photos extends React.Component {
     super();
     this.state = {
       bands: [],
-      venues: []
+      venues: [],
+      festivals: []
     };
 
     this.client = contentful.createClient({
@@ -35,6 +36,15 @@ class Photos extends React.Component {
 
         this.setVenues(venues);
       })
+    
+    this.client.getEntries({ content_type: "festivals", order: "sys.createdAt" })
+      .then((response) => {
+        const festivals = response.items.map((item) => {
+          return item.fields;
+        })
+
+        this.setFestivals(festivals);
+      })
   }
 
   setBands(bands) {
@@ -45,10 +55,12 @@ class Photos extends React.Component {
     this.setState({ venues });
   }
 
-  render() {
-    const { bands, venues } = this.state;
+  setFestivals(festivals) {
+    this.setState({ festivals });
+  }
 
-    console.log(venues);
+  render() {
+    const { bands, venues, festivals } = this.state;
 
     return(
       <div className={'pressKitWrapper'}>
@@ -156,6 +168,18 @@ class Photos extends React.Component {
                 <p className="listtitle" style={ { fontWeight: 100 } }>{venue.location}</p>                
               </div>
             )) }
+          
+          <div className={'pressKitHeader'}>
+            <p>Box Era has performed at the following festivals:</p>
+          </div>
+          { festivals
+            .map((fest, index) => (
+              <div className="presslistitem" key={ index }>
+                <p className="listtitle">{fest.name}</p>
+                <p className="listtitle" style={{ fontWeight: 100 }}>{fest.location}</p>
+              </div>
+            )) }
+          <p className="listtitle" style={{ fontWeight: 100 }}>* multiple appearances</p>
         </div>
       </div>
     );
