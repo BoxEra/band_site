@@ -140,6 +140,48 @@ class Photos extends React.Component {
                 <p>Download File</p>
               </a>
             </div>
+            <div className="image">
+              <img src="./img/bw_crew.JPG" />
+              <a download="bw_crew.JPG" href="./img/bw_crew.JPG" title="BW Crew">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/crew.JPG" />
+              <a download="crew.JPG" href="./img/crew.JPG" title="Crew">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/crew2.JPG" />
+              <a download="crew2.JPG" href="./img/crew2.JPG" title="Crew2">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/crew3.JPG" />
+              <a download="crew3.JPG" href="./img/crew3.JPG" title="Crew3">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/jump.JPG" />
+              <a download="jump.JPG" href="./img/jump.JPG" title="Jump">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/jump2.JPG" />
+              <a download="jump2.JPG" href="./img/jump2.JPG" title="Jump2">
+                <p>Download File</p>
+              </a>
+            </div>
+            <div className="image">
+              <img src="./img/jump3.png" />
+              <a download="jump3.png" href="./img/jump3.png" title="Jump3">
+                <p>Download File</p>
+              </a>
+            </div>
           </div>
 
           <div className={'pressKitHeader'}>
