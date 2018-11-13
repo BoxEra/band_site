@@ -56,13 +56,7 @@ class Home extends React.Component {
     let state = this.state;
     return (
       <div className={'homeWrapper'}>
-        <video width="640px" height="360px" controls>
-          <source src="https://s3.amazonaws.com/boxera/BoxEraInStudioLive_Final.mp4" type="video/mp4" />
-        </video>
-        <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/nrV_o_R3RS4"} frameBorder={"0"} allowFullScreen></iframe>
-        <strong></strong>
-        <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://www.youtube.com/embed/eVW1qOmTG4I"} frameBorder={"0"} allowFullScreen></iframe>
-        <strong>Credit to Brandon Russell and Sheen Radpants Productions</strong>
+        <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://s3.amazonaws.com/boxera/Box+Era+Promo+Edit.mp4"} frameBorder={"0"} allowFullScreen></iframe>
         <MusicPlayer
           music={state.music}
           trackToggle={this.handleTrackToggle}
