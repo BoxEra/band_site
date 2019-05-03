@@ -1,15 +1,15 @@
-import React from 'react';
-import { bindAll, reverse } from 'lodash';
+import React from "react";
+import { bindAll, reverse } from "lodash";
 
 // components
-import MusicPlayer from './music_player';
-import ReactPlayer from 'react-player';
-import FollowUs from '../../components/FollowUsBlock/follow_us.jsx';
+import MusicPlayer from "./music_player";
+import ReactPlayer from "react-player";
+import FollowUs from "../../components/FollowUsBlock/follow_us.jsx";
 
 // actions
-import * as Util from '../../actions/actions';
+import * as Util from "../../actions/actions";
 
-import './home.scss';
+import "./home.scss";
 
 class Home extends React.Component {
   constructor(props) {
@@ -17,15 +17,15 @@ class Home extends React.Component {
     this.state = {
       music: null,
       playing: false,
-      url: ''
+      url: ""
     };
 
-    bindAll(this, 'handleTrackToggle', 'play', 'pause');
+    bindAll(this, "handleTrackToggle", "play", "pause");
   }
 
   componentWillMount() {
-    Util.getMusic().then((music) => {
-      this.setState({music: reverse(music.music)});
+    Util.getMusic().then(music => {
+      this.setState({ music: reverse(music.music) });
     });
   }
 
@@ -44,32 +44,50 @@ class Home extends React.Component {
         url: url
       });
     } else {
-      this.setState({playing: true});
+      this.setState({ playing: true });
     }
   }
 
   pause() {
-    this.setState({playing: false});
+    this.setState({ playing: false });
   }
 
   render() {
     let state = this.state;
     return (
-      <div className={'homeWrapper'}>
-        <iframe className={'homePageVideo'} style={{ width: "640px", height: "360px" }} src={"https://s3.amazonaws.com/boxera/Box+Era+Promo+Edit.mp4"} frameBorder={"0"} allowFullScreen></iframe>
+      <div className={"homeWrapper"}>
+        <video
+          width="640px"
+          height="360px"
+          className={"homePageVideo"}
+          src={"https://s3.amazonaws.com/boxera/Box+Era+Promo+Edit.mp4"}
+          controls
+        />
         <MusicPlayer
           music={state.music}
           trackToggle={this.handleTrackToggle}
           url={state.url}
           playing={state.playing}
         />
-        <iframe id="follow" src="https://open.spotify.com/follow/1/?uri=spotify:artist:7MIperBcogvkVTMs2D1XOC" height="27"></iframe>
-        <iframe className="spotify" src="https://open.spotify.com/embed/artist/7MIperBcogvkVTMs2D1XOC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe
+          id="follow"
+          src="https://open.spotify.com/follow/1/?uri=spotify:artist:7MIperBcogvkVTMs2D1XOC"
+          height="27"
+        />
+        <iframe
+          className="spotify"
+          src="https://open.spotify.com/embed/artist/7MIperBcogvkVTMs2D1XOC"
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        />
         <FollowUs />
         <ReactPlayer
           url={state.url}
           playing={state.playing}
-          style={{display: 'none'}}
+          style={{ display: "none" }}
         />
       </div>
     );

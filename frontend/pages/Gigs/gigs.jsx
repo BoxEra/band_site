@@ -44,8 +44,8 @@ class Gigs extends React.Component {
       let date = gig.date.split("-");
       let year = date[2];
 
-      if (year.length === 2) {
-        year = `20${year}`;
+      if (year.length === 4) {
+        year = year.substring(2, year.length);
       }
 
       date = `${parseInt(date[0])}/${parseInt(date[1])}/${parseInt(year)}`;
@@ -74,7 +74,13 @@ class Gigs extends React.Component {
 
     let oldTourDates = this.state.tourDates.map((gig, idx) => {
       let date = gig.date.split("-");
-      date = `${parseInt(date[0])}/${parseInt(date[1])}`;
+      let year = date[2];
+
+      if (year.length === 4) {
+        year = year.substring(2, year.length);
+      }
+
+      date = `${parseInt(date[0])}/${parseInt(date[1])}/${parseInt(year)}`;
       if (this.isInPast(today, gig.date)) {
         return (
           <div className={classnames("tourDate")} key={idx}>
