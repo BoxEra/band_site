@@ -21,7 +21,9 @@ class Gigs extends React.Component {
       method: "GET",
       url: `${location.origin}/getTourDates`
     }).then(res => {
-      let tourDates = res.tourDates.sort((a, b) => (a.date < b.date ? -1 : 1));
+      let tourDates = res.tourDates.sort((a, b) =>
+        new Date(a.date) < new Date(b.date) ? -1 : 1
+      );
       this.setState({ tourDates });
     });
   }
