@@ -118,7 +118,7 @@ class Gigs extends React.Component {
         </ul>
 
         <h1 className={"gigsHeader"}>PAST GIGS</h1>
-        <ul className="tourDates">{oldTourDates}</ul>
+        <ul className="tourDates">{oldTourDates.reverse()}</ul>
       </div>
     );
   }
